@@ -1,11 +1,18 @@
 function spinWords(string) {
-  const letters = string.split("");
+  const words = string.split(" ");
+  let newString = [];
 
-  if (letters.length > 4) {
-    return letters.reverse().join("");
-  } else {
-    return string;
-  }
+  words.forEach((word) => {
+    const letters = word.split("");
+
+    if (letters.length > 4) {
+      newString.push(letters.reverse().join(""));
+    } else {
+      newString.push(letters.join(""));
+    }
+  });
+
+  return newString.join(" ");
 }
 
 module.exports = spinWords;
