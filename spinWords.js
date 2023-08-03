@@ -1,5 +1,5 @@
 function spinWords(string) {
-  return "hello";
+  return string;
 }
 
 module.exports = spinWords;
